@@ -40,4 +40,4 @@ RUN mkdir /tmp/work
 WORKDIR /tmp/work
 RUN git clone https://github.com/llofberg/smoke-test.git
 WORKDIR /tmp/work/smoke-test
-# RUN mvn clean verify exec:java
+RUN mvn clean verify exec:java
