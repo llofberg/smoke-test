@@ -11,6 +11,7 @@ import vowpalWabbit.learner.VWMulticlassLearner;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -50,7 +51,12 @@ public class SmokeTest {
       mwt.chooseAction(explorer, uniqueKey, new Context(features));
       log.debug("Action: {}", recorder.getAction());
     }
-    vw.close();
+
+    try {
+      vw.close();
+    } catch (IOException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   public static void main(String[] args) {
