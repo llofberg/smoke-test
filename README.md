@@ -11,7 +11,9 @@ To build a vw environment in docker copy and build the Dockerfile.
 
 ```cd /tmp/work/smoke-test```
 
-```mvn clean install exec:java```
+```mvn clean install```
+
+```java -jar target/smoke-test*.jar```
 
 No need to clone the repo.
 
