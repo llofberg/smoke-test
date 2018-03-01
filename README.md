@@ -5,6 +5,10 @@ To build a vw environment in docker copy and build the Dockerfile.
 
 ```docker build . -t vw```
 
+```docker run -it --rm smoke-test:1.0-SNAPSHOT java -jar target/smoke-test*.jardocker run -it --rm smoke-test:1.0-SNAPSHOT bash -c "java -jar target/smoke-test*.jar"```
+
+or
+
 ```docker run -it --rm vw bash```
 
 ```vw --help```
